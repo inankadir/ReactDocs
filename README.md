@@ -110,4 +110,35 @@ return (
   />
  );
 
- 
+ You can put more complex expressions inside the JSX curly braces too, for example, string concatenation:
+```
+const user = {
+ name: 'Hedy Lamar',
+ imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+ imageSize: 90,
+};
+export default function Profile() {
+ return (
+  <>
+   <h1>{user.name}</h1>
+   <img
+     className="avatar"
+     src={user.imageUrl}
+     alt={'Photo of} + user.name}
+     style={{
+      width:  user.imageSize,
+      height: user.imageSize
+      }}
+     />
+    </>
+   );
+ }
+```
+
+In the above example, style={{}} is not a special syntax, but a ruegular{} object inside the style={ } JSX curly braces. You can use yhe style attribute when your styles depend on JavaScript variables.
+
+## Conditional rendering
+
+
+
+  

@@ -139,6 +139,46 @@ In the above example, style={{}} is not a special syntax, but a ruegular{} objec
 
 ## Conditional rendering
 
+In React, there is no special syntax for writing coditions.Instead, you'll use same techniques as you use when writing regular JavaScript code.For Example, you can use an if statement to conditionally include JSX:
+
+```
+let content;
+if (isLoggedIn) {
+ content = <AdminPanel />;
+} else {
+ content = <LoginForm />;
+}
+return (
+ <div>
+  {content}
+ </div>
+);
+```
+
+If you prefer more compact code, you can use the conditional ? operator. Unlike if, it works inside JSX:
+```
+<div>
+ {isLoggedIn ? (
+  <AdminPanel />
+) : (
+  <LoginForm />
+)}
+</div>
+```
+When you don't need the else branch, you can also use a shorter logical && syntax:
+```
+<div>
+ {isLoggedIn && <AdminPanel />}
+</div>
+```
+All of these approaches also work for conditionally specifying attributes. If you're unfamiliarwith some of this JavaScript syntax, you can start by always using if...else.
+
+## Rendering lists
+
+
+
+
+
 
 
   
